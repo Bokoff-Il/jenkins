@@ -1,4 +1,4 @@
-package bokoff.il;
+package bokoff.il.simple;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
