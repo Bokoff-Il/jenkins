@@ -37,7 +37,7 @@ tasks.withType(JavaCompile){
 
 tasks.withType(Test) {
     useJUnitPlatform()
-
+    systemProperties(System.getProperties())
     testLogging {
         lifecycle {
             events "started", "skipped", "failed", "standard_error", "standard_out"
@@ -48,8 +48,17 @@ tasks.withType(Test) {
 
 task demoqa_tests(type: Test) {
     useJUnitPlatform {
-
         includeTags "demoqa"
-//        excludeTags "simple"
+    }
+
+}
+task test5(type: Test) {
+    useJUnitPlatform {
+        includeTags "test5"
+    }
+}
+task test6(type: Test) {
+    useJUnitPlatform {
+        includeTags "test6"
     }
 }
