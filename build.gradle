@@ -14,6 +14,8 @@ dependencies {
             'com.codeborne:selenide:6.4.0',
             'org.slf4j:slf4j-simple:1.7.32',
             'io.qameta.allure:allure-selenide:2.17.3',
+            'org.aeonbits.owner:owner:1.0.4'
+
     )
 }
 
@@ -60,5 +62,10 @@ task test5(type: Test) {
 task test6(type: Test) {
     useJUnitPlatform {
         includeTags "test6"
+    }
+}
+task owner(type: Test) {
+    useJUnitPlatform {
+        includeTags "owner"
     }
 }
